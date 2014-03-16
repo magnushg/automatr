@@ -5,4 +5,4 @@ Project for controlling and recieving data from an Arduino attached to a Raspber
 
 The Solution consists of two submodules, namely [recievr](https://github.com/magnushg/recievr) and [ctrlr](https://github.com/magnushg/ctrlr).
 
-The presentation folder contains a [presentation](presentation/ControllingTheWorldBouvetOne.pptx) and a [script](presentation/script.md) to be used for this presentation.
+The presentation folder contains a [presentation](presentation/ControllingTheWorldBouvetOne.pptx) and a [script](presentation/Script.md) to be used for this presentation.
