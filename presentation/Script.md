@@ -64,7 +64,13 @@ Demo
 
 Oppsummering
 ------------
-Ikke bare en gutte / jenteromsgreie
-Avhengig av et godt økosystem og gode tjenester rundt for at de skal bli bra
-Nettskyen er en opplagt plattform for kommunikasjon
-Anbefaler Simen Sommerfeldt sin artikkel på utbrudd, http://blogg.bouvet.no/2014/03/07/the-internet-of-things-keiserens-nye-wearables/
+* Ikke bare en gutte / jenteromsgreie
+* Avhengig av et godt økosystem og gode tjenester rundt for at de skal bli bra
+* Nettskyen er en opplagt plattform for kommunikasjon
+* Anbefaler Simen Sommerfeldt sin artikkel på utbrudd, http://blogg.bouvet.no/2014/03/07/the-internet-of-things-keiserens-nye-wearables/
+
+Kode tilgjengelig på github
+---------------------------
+
+Takk for meg
+------------
