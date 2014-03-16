@@ -1,0 +1,3 @@
+[submodule "recievr"]
+	path = recievr
+	url = https://github.com/magnushg/recievr.git
