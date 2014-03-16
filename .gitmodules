@@ -1,3 +1,6 @@
 [submodule "recievr"]
 	path = recievr
 	url = https://github.com/magnushg/recievr.git
+[submodule "ctrlr"]
+	path = ctrlr
+	url = https://github.com/magnushg/ctrlr.git
