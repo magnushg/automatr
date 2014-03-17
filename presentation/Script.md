@@ -62,43 +62,45 @@ Demo
 ----
 * Vise workflow, kode på Windows box, overføre filer med WinSCP, kjøre kode etc via SSH
 * Bruker supervisor for å holde prosessen i gang.
-* `git checkout demo/baseline`
+`git checkout demo/baseline`
 * START demo/stage-1
-* add relay, `var relay = new five.Relay("O0");`
+add relay, `var relay = new five.Relay("O0");`
 * legg relay til repl
 * END demo/stage-1
 * START demo stage-2
 * Legg til lightswitch
-* `automatrFirebase.on('value', function (snapshot) {
-      snapshot.val().lightswitch ? relay.on() : relay.off();
-  });`
-* `thermSensor.on('data', function () {
-    var temperature = converter.celsius(this.value).toFixed(2);
-    automatrFirebase.update({temperature: {value:temperature, timestamp: Date.now()}});
-  });
-
-  photoSensor.on('data', function () {
-    automatrFirebase.update({brightness: {value:this.value, timestamp: Date.now()}});
-  });`
+            automatrFirebase.on('value', function (snapshot) {
+                  snapshot.val().lightswitch ? relay.on() : relay.off();
+              });
+            
+            thermSensor.on('data', function () {
+                var temperature = converter.celsius(this.value).toFixed(2);
+                automatrFirebase.update({temperature: {value:temperature, timestamp: Date.now()}});
+              });
+            
+              photoSensor.on('data', function () {
+                automatrFirebase.update({brightness: {value:this.value, timestamp: Date.now()}});
+              });
 * END demo/stage-2
 * START demo/stage-3
-* `thermSensor.on('data', function () {
-    var temperature = converter.celsius(this.value).toFixed(2);
-    var tempLog = {temperature: {value:temperature, timestamp: Date.now()}};
-    console.log("Temperature: " + temperature);
-    automatrFirebase.update(tempLog);
-    environmentLog.push(tempLog);
-  });
 
-  photoSensor.on('data', function () {
-    var brightnessLog = {brightness: {value:this.value, timestamp: Date.now()}};
-    console.log("Brightness: " + this.value);    
-    automatrFirebase.update(brightnessLog);
-    environmentLog.push(brightnessLog);
-    if(this.value <= 200) {
-      relay.on();
-    }
-  });`
+            thermSensor.on('data', function () {
+                var temperature = converter.celsius(this.value).toFixed(2);
+                var tempLog = {temperature: {value:temperature, timestamp: Date.now()}};
+                console.log("Temperature: " + temperature);
+                automatrFirebase.update(tempLog);
+                environmentLog.push(tempLog);
+              });
+            
+              photoSensor.on('data', function () {
+                var brightnessLog = {brightness: {value:this.value, timestamp: Date.now()}};
+                console.log("Brightness: " + this.value);    
+                automatrFirebase.update(brightnessLog);
+                environmentLog.push(brightnessLog);
+                if(this.value <= 200) {
+                  relay.on();
+                }
+              });
 * END demo/stage-3
 
 Oppsummering
