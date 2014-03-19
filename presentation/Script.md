@@ -25,6 +25,7 @@ Internet of things
 * Kontrollere lamper, ovner, kaffetralter you name it.
 * Sensorer for temperatur, lys, gasser, fukt, bevegelse, alkohol
 * Lys, motorer, servoer og releer som lar deg kontrollere andre elektriske enheter som ovner, lys, kaffetraktere.
+* For å realisere dette trenger man noe som kan kontrollere den virkelige verden.
 
 Arduino
 -------
@@ -69,7 +70,8 @@ add relay, `var relay = new five.Relay("O0");`
 * END demo/stage-1
 * START demo stage-2
 * Legg til lightswitch
-            automatrFirebase.on('value', function (snapshot) {
+            
+		automatrFirebase.on('value', function (snapshot) {
                   snapshot.val().lightswitch ? relay.on() : relay.off();
               });
             
