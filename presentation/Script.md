@@ -34,6 +34,7 @@ Arduino
 * Microcontroller board basert på ATmega328, 14 digitale input /output pinner, 6 kan brukes til PWM (Pulse Width Modulation), 6 analoge input (Brukes gjerne til sensorer 0-1023).
 * Kan motta og sende mellom 0 - 5v styrke, det er slik man f.eks. tar imot verdier fra en sennsor.
 * Opererer med voltstyrke på 5V.
+* Programmeringsspråk basert på Wiring, en lignende plattform. C-basert.
 
 Enter johnny five & Raspberry pi
 --------------------------------
