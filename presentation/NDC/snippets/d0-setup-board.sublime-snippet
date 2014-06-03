@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+var board = new five.Board();
+
+board.on("ready", function() {
+ $1
+ board.repl.inject({
+    
+  });
+ 
+});
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>d0-setup-board</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

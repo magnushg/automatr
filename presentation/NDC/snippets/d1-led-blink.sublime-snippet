@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+var led = five.Led("O0");
+led.strobe();
+$1
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>d1-led-blink</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

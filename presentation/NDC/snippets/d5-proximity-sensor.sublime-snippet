@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+var proximity = new five.Sensor({pin: "I5"});
+ 
+proximity.on("change", function() {
+	if(this.value > 0) {
+	automatrFirebase.update({proximity: {value: true, timestamp: Date.now()}});
+	led.on();
+	}
+	else {
+	automatrFirebase.update({proximity: {value: false, timestamp: Date.now()}});
+	led.off();
+	}
+});
+$1
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>d5-proximity-sensor</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[stringUtils = require("./utils/stringUtils"),
+Firebase = require("firebase"),
+firebaseName = 'automatr-test',
+  
+  
+automatrFirebase = new Firebase('https://{0}.firebaseio.com/'.format(firebaseName)),
+environmentLog = new Firebase('https://{0}.firebaseio.com/environmentLog'.format(firebaseName));
+
+$1
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>d2-firebase-endpoints</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

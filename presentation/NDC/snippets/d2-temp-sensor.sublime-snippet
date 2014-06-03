@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+var tempSensor = five.Sensor({pin: "I0", freq: 2000});
+
+tempSensor.on("data", function() {
+	var tempCelsius = converter.tempC(this.value).toFixed(1);
+	var temperature = {temperature: {value:tempCelsius, timestamp: Date.now()}};
+	automatrFirebase.update(temperature);    
+	environmentLog.push(temperature);
+	});
+	$1
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>d2-temp-sensor</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

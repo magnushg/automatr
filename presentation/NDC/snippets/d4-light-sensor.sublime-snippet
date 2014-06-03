@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+var lightSensor = five.Sensor({pin: "I2", freq: 2000});
+var lightSwitch = new five.Relay("O5");
+
+lightSensor.on("data", function () {
+    var brightness = {brightness: {value: this.value, timestamp: Date.now()}}
+    automatrFirebase.update(brightness);
+    environmentLog.push(brightness); 
+    this.value < 200 ? lightSwitch.on() : lightSwitch.off();
+    });
+$1
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>d4-light-sensor</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
